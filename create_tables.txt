@@ -1,3 +1,5 @@
+Create database IF NOT EXISTS Emergency_DB;
+
 CREATE TABLE `emergency_db`.`nurses` (
 nurse_ID varchar(15) primary key,
 F_name varchar(25),
@@ -108,4 +110,4 @@ patient_ID varchar(15) references `emergency_db`.`patients` (`patient_ID`)
 
 );
 
-new
+
