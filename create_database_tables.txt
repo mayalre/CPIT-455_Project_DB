@@ -1,0 +1,119 @@
+Create database IF NOT EXISTS Emergency_DB;
+
+CREATE TABLE `emergency_db`.`nurses` (
+nurse_ID varchar(15) primary key,
+F_name varchar(25),
+L_name varchar(25),
+phone_number INT(10),
+email varchar(30),
+pass varchar(15)
+
+);
+
+CREATE TABLE `emergency_db`.`doctors` (
+doctor_ID varchar(15) primary key,
+F_name varchar(25),
+L_name varchar(25),
+phone_number INT(10),
+email varchar(30),
+pass varchar(15)
+
+);
+
+CREATE TABLE `emergency_db`.`admin` (
+admin_ID varchar(15) primary key,
+F_name varchar(25),
+L_name varchar(25),
+phone_number INT(10),
+email varchar(30),
+pass varchar(15)
+
+);
+
+CREATE TABLE `emergency_db`.`rooms` (
+room_ID varchar(15) primary key,
+room_name varchar(25),
+floor_number varchar(25),
+number_of_bed INT(40),
+admin_ID varchar (15),
+pass varchar(15),
+foreign key (admin_ID) references `emergency_db`.`admin` (`admin_ID`),
+);
+
+CREATE TABLE `emergency_db`.`beds` (
+bed_ID varchar(15) primary key,
+room_ID varchar(15),
+admin_ID varchar (15),
+foreign key (room_ID) references `emergency_db`.`rooms` (`room_ID`),
+foreign key (admin_ID) references `emergency_db`.`admin` (`admin_ID`)
+);
+
+CREATE TABLE `emergency_db`.`bed_activation` (
+doctor_ID varchar(15), 
+bed_ID varchar (15) ,
+bed_status varchar(25),
+foreign key (doctor_ID) references `emergency_db`.`doctors` (`doctor_ID`), 
+foreign key (bed_ID) references `emergency_db`.`beds` (`bed_ID`)
+);
+
+
+CREATE TABLE `emergency_db`.`waiting` (
+Waiting_time varchar(25),
+patient_ID varchar(15) primary key,
+foreign key (patient_ID)  references `emergency_db`.`patients` (`patient_ID`)
+
+);
+
+CREATE TABLE `emergency_db`.`main_triage` (
+patient_ID varchar(15) primary key , 
+temp varchar(25),
+pressure varchar(25),
+Oxygen_saturation_heart_rate varchar(25),
+respitratory_rate varchar(25),
+ECG varchar(35),
+PH varchar(35),
+CO2 varchar(35),
+HCO3 varchar(35),
+Po2 varchar(35),
+So2 varchar(35),
+chief_complain varchar(35),
+CTAS_score varchar(35),
+nurse_ID varchar(15),
+foreign key (patient_ID)  references `emergency_db`.`patients` (`patient_ID`),
+foreign key (nurse_ID)  references `emergency_db`.`nurses` (`nurse_ID`)
+);
+
+
+CREATE TABLE `emergency_db`.`patients` (
+patient_ID varchar(15) primary key,
+F_english_name varchar(25),
+S_english_name varchar(25),
+L_english_name varchar(25),
+F_arabic_name varchar(25),
+S_arabic_name varchar(25),
+L_arabic_name varchar(25),
+city varchar(35),
+district varchar(35),
+street varchar(35),
+phone_number INT(10),
+gender varchar(25),
+martial_status varchar(35),
+birthday varchar(35),
+nationality varchar(35),
+religion varchar(35),
+language varchar(35),
+nurse_ID varchar(15),
+foreign key (nurse_ID)  references `emergency_db`.`nurses` (`nurse_ID`)
+
+);
+
+
+CREATE TABLE `emergency_db`.`teams` (
+team_name varchar(35),
+team_number varchar(35),
+doctor_ID varchar(15),
+patient_ID varchar(15),
+foreign key (doctor_ID) references `emergency_db`.`doctors` (`doctor_ID`),
+foreign key (patient_ID) references `emergency_db`.`patients` (`patient_ID`)
+
+);
