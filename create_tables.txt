@@ -107,3 +107,5 @@ doctor_ID varchar(15) references `emergency_db`.`doctors` (`doctor_ID`),
 patient_ID varchar(15) references `emergency_db`.`patients` (`patient_ID`)
 
 );
+
+new
