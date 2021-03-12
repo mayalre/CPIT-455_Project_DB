@@ -14,43 +14,43 @@
     <body>
         <form name="SignUpForm" action="addAccount.jsp" method="POST">
 
-            <h2>Register</h2> 
+            <h2>Create Patient File</h2> 
 
-            <label>ID:</label><br><br>
-            <input type="text" name="ID" value="" size="10"/>
+            <p><label>ID:</label><br><br>
+                <input type="text" name="ID" value="" size="10"/></p>
 
             <p><label>English Name:</label><br><br>
-                <input type="text" name="EFname" value="" size="20" placeholder = "First Name"/>
-                &nbsp <input type="text" name="ESname" value="" size="20" placeholder = "Second Name"/>
-                &nbsp <input type="text" name="ETname" value="" size="20" placeholder = "Third Name"/>
-                &nbsp <input type="text" name="ELname" value="" size="20" placeholder = "Last Name"/></p>
+                <input type="text" name="EFname" value="" size="20" placeholder = "First Name" required/>
+                &nbsp <input type="text" name="ESname" value="" size="20" placeholder = "Second Name" required/>
+                &nbsp <input type="text" name="ETname" value="" size="20" placeholder = "Third Name" required/>
+                &nbsp <input type="text" name="ELname" value="" size="20" placeholder = "Last Name" required/></p>
 
             <p><label>Arabic Name:</label><br><br>  
-                <input type="text" name="AFname" value="" size="20" placeholder = "First Name"/>
-                &nbsp <input type="text" name="ASname" value="" size="20" placeholder = "Second Name"/>
-                &nbsp <input type="text" name="ATname" value="" size="20" placeholder = "Third Name"/> 
-                &nbsp <input type="text" name="ALname" value="" size="20" placeholder = "Last Name"/></p> 
+                <input type="text" name="AFname" value="" size="20" placeholder = "First Name" required/>
+                &nbsp <input type="text" name="ASname" value="" size="20" placeholder = "Second Name" required/>
+                &nbsp <input type="text" name="ATname" value="" size="20" placeholder = "Third Name" required/> 
+                &nbsp <input type="text" name="ALname" value="" size="20" placeholder = "Last Name" required/></p> 
 
             <p><label>Address:</label><br><br>
-                <input type="text" name="city" value="" size="20" placeholder="City" />
-                &nbsp <input type="text" name="district" value="" size="20" placeholder="District" />
-                &nbsp <input type="text" name="street" value="" size="20" placeholder="Street" /> </p>
+                <input type="text" name="city" value="" size="20" placeholder="City" required/>
+                &nbsp <input type="text" name="district" value="" size="20" placeholder="District" required/>
+                &nbsp <input type="text" name="street" value="" size="20" placeholder="Street" required/> </p>
 
             <p><label>Phone Number:</label><br><br>
-                <input type="text" name="phoneNum" value="" size="10" /></p>
+                <input type="text" name="phoneNum" value="" size="10" required/></p>
 
             <p><label>Telephone Number:</label><br><br>
-                <input type="text" name="TeleNum" value="" size="7" /></p>
+                <input type="text" name="TeleNum" value="" size="7" required/></p>
 
             <p><label>Gender:</label><br><br>
-                <select name="Gender">
+                <select name="Gender" required>
                     <option disabled selected>-- select one --</option>
                     <option>Female</option>
                     <option>Male</option>
                 </select></p>
 
             <p><label>Marital Status:</label><br><br>
-                <select name="maritalStat">
+                <select name="maritalStat" required>
                     <option disabled selected>-- select one --</option>
                     <option>Single</option>
                     <option>Married</option>
@@ -59,10 +59,10 @@
                 </select></p>
 
             <p><label>Date of Birth:</label><br><br>
-                <input type="date" name="DB" value="" /></p>
+                <input type="date" name="DB" value="" required/></p>
 
             <p><label>Nationality:</label><br><br>
-                <select name="nationality">
+                <select name="nationality" required>
                     <option value="" disabled selected>-- select one --</option>
                     <option value="afghan">Afghan</option>
                     <option value="albanian">Albanian</option>
@@ -260,7 +260,7 @@
 
 
             <p><label>Religion:</label><br><br>
-                <select name="religion">
+                <select name="religion" required>
                     <option value="" disabled selected>-- select one --</option>
                     <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
                     <option value="Agnostic">Agnostic</option>
@@ -290,7 +290,7 @@
                 </select></p>
 
             <p><label>Language:</label><br><br>
-                <select name= "language">
+                <select name= "language" required>
                     <option value="" disabled selected>-- select one --</option>
                     <option value="Afrikaans">Afrikaans</option>
                     <option value="Albanian">Albanian</option>
@@ -367,7 +367,7 @@
                 </select></p>
 
             <p><label>ID Picture:</label><br><br>
-                <input type="file" name="IDpicture" value="" /></p>
+                <input type="file" name="IDpicture" value="" required/></p>
 
             <input type="submit" value="Submit" name="Submit" />
             <input type="reset" value="Clear" name="Clear" />
