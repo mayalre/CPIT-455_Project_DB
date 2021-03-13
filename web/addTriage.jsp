@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Page</title>
+        <title>Add Triage Page</title>
     </head>
     <body>
         <%
@@ -45,7 +45,7 @@
             String CTAS_Score = request.getParameter("CTAS_Score");
 
         %>
-        
+
         <table border="0">
 
             <tbody>
@@ -88,28 +88,28 @@
                 <tr>
                     <td><%=HCO3%></td>
                 </tr>
-                
+
                 <tr>
                     <td><%=pO2%></td>
                 </tr>
-                
+
                 <tr>
                     <td><%=SO2%></td>
                 </tr>
-                
+
                 <tr>
                     <td><%=baseExcess%></td>
                 </tr>
-                
+
                 <tr>
                     <td><%=chiefComplain%></td>
                 </tr>
-                
+
                 <tr>
                     <td><%=CTAS_Score%></td>
                 </tr>
             </tbody>
         </table>
-                
+
     </body>
 </html>
