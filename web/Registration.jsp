@@ -372,5 +372,10 @@
             <input type="submit" value="Submit" name="Submit" />
             <input type="reset" value="Clear" name="Clear" />
         </form> 
+        <br>
+        <form action="mailto:putEmailHere@somthing.com" method="post" enctype="text/plain">
+            <input type="submit" value="Send Email">
+        </form>
+
     </body>
 </html>
