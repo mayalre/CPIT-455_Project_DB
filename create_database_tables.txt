@@ -37,7 +37,7 @@ floor_number varchar(25),
 number_of_bed INT(40),
 admin_ID varchar (15),
 pass varchar(15),
-foreign key (admin_ID) references `emergency_db`.`admin` (`admin_ID`),
+foreign key (admin_ID) references `emergency_db`.`admin` (`admin_ID`)
 );
 
 CREATE TABLE `emergency_db`.`beds` (
