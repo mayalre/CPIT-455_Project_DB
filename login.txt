@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>My First Web Page</title>
+    </head>
+    <body>
+        <h1>Login Page</h1>
+        <form name="loginForm" action="display.jsp" method="POST">
+            <table border="0">
+            
+                <tbody>
+                    <tr>
+                        <td>Hospital ID: </td>
+                        <td><input type="text" name="hospital ID" value="" size="20" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password" value="" size="8" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit" /></td>
+                        <td><input type="reset" value="Clear" /></td>
+                        <form name="SignupForm" action="signUp.jsp" method="POST">
+                        <td><input type="submit" value="signUp" /></td>
+                         </form>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+
+    </body>
+</html>
