@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    </head>
+    <body>
+        <h1>Display page</h1>
+        <% 
+ String numberOfBeds= request.getParameter("number1");
+ String numberOfRooms= request.getParameter("number");           
+            %>
+            <table border="0">
+            
+                <tbody>
+                    <tr>
+                        <td>  <%=number1%></td>
+                    </tr>
+                    <tr>
+                        <td> <%=number%></td>
+                    </tr>
+                </tbody>
+            </table>
+
+    </body>
+</html>

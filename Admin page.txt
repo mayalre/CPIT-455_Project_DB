@@ -1,0 +1,19 @@
+<html>
+</form>
+<h2>Admin</h2>
+
+
+ <fieldset>
+<legend>Admin:</legend>
+
+<form method="get" action="/AvalibleRooms.jsp">
+<button type="btn ">Modify Rooms</button>
+
+<form method="get" action="/AvalibleBeds.jsp">
+<button type="btn ">Modify Beds</button>
+ </fieldset>
+
+
+</body>
+</html>
+</html>
